@@ -5,7 +5,6 @@ import './App.css'
 
 class App extends Component {
   state = {
-    openDoorsCount: 0,
     doors: this.getRandomDoors()
   }
 
@@ -43,6 +42,10 @@ class App extends Component {
         rand: Math.random()
       }))
       .sort((a, b) => a.rand - b.rand)
+      .map(item => {
+        delete item.rand
+        return item
+      })
   }
 
   renderDoors() {
@@ -60,15 +63,15 @@ class App extends Component {
       ...doors.slice(index + 1)
     ]
     this.setState({
-      doors: newDoors,
-      openDoorsCount: this.state.openDoorsCount + 1
+      doors: newDoors
     })
   }
 
   render() {
+    const openDoorsNum = this.state.doors.filter(item => item.isOpen).length
     return (
       <React.Fragment>
-        <Counter num={this.state.openDoorsCount} />
+        <Counter num={openDoorsNum} />
         <section className="bdy">{this.renderDoors()}</section>
       </React.Fragment>
     )
