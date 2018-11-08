@@ -1,0 +1,16 @@
+.Door {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: white;
+  border: 50px solid crimson;
+  border-top: none;
+  border-bottom: none;
+  transition: border-width 1s ease;
+}
+
+.open {
+  border-width: 0;
+  color: crimson;
+}
