@@ -1,0 +1,2 @@
+body{background:#90ee90;flex-direction:column}.Door,body{display:flex;justify-content:center;align-items:center}.Door{background:#fff;color:#fff;border:50px solid #dc143c;border-top:none;border-bottom:none;-webkit-transition:border-width 1s ease;transition:border-width 1s ease}.open{border-width:0;color:#dc143c}.bdy{display:grid;grid-gap:10px;grid-template-columns:repeat(4,100px);grid-auto-rows:100px;background:#90ee90;padding:20px}
+/*# sourceMappingURL=main.8c20ff95.chunk.css.map */
